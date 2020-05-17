@@ -1,25 +1,26 @@
 import axios from 'axios';
-import {    CARGANDO, 
-            AGREGAR, 
-            BORRAR, 
+import {    LOADING, 
+            ADD_CLIENT, 
+            DELETE_CLIENT, 
             UPDATE_CLIENT, 
-            TRAER_TODOS, 
+            GET_ALL, 
             ERROR,
             CHANGE_NAME_CLIENT,
             CHANGE_LAST_NAME_CLIENT,
             CHANGE_PHONE_CLIENT,
             CHANGE_EMAIL_CLIENT,
-            CLEAN_ATRIBUTE } from '../types/clientesTypes';
+            CHANGE_ADDRESS_CLIENT,
+            CLEAN_ATRIBUTE } from '../types/clientsTypes';
 
 export const traerTodos = () => async(dispatch) => {
     dispatch({
-        type: CARGANDO
+        type: LOADING
     });
 
     try {
         const respuesta = await axios.get('/api/clientes')
         dispatch({
-            type: TRAER_TODOS,
+            type: GET_ALL,
             payload: respuesta.data
         });
     } catch (error) {
@@ -32,14 +33,12 @@ export const traerTodos = () => async(dispatch) => {
 }
 
 export const updateClient = (client) => async(dispatch) => {
-    console.log('client', client);
     dispatch({
-        type: CARGANDO
+        type: LOADING
     });
 
     try {
         const request = await axios.put(`/api/clientes/${client.id}`, client);
-        console.log('request', request)
         dispatch({
             type: UPDATE_CLIENT
         });
@@ -48,6 +47,26 @@ export const updateClient = (client) => async(dispatch) => {
         dispatch({
             type: ERROR,
             payload: 'No se pudo actualizar el cliente'
+        });  
+    }
+}
+
+export const addClient = (newClient) => async(dispatch) => {
+    console.log('nuevo cliente', newClient);
+    dispatch({
+        type: LOADING
+    });
+
+    try {
+        const request = await axios.post(`/api/clientes/add`, newClient);
+        dispatch({
+            type: ADD_CLIENT
+        });
+        
+    } catch (error) {
+        dispatch({
+            type: ERROR,
+            payload: 'No se pudo añadir el cliente'
         });  
     }
 }
@@ -77,6 +96,13 @@ export const changueEmailClient = (email) => (dispatch) => {
     dispatch({
         type: CHANGE_EMAIL_CLIENT,
         payload: email
+    })
+}
+
+export const changueAddressClient = (address) => (dispatch) => {
+    dispatch({
+        type: CHANGE_ADDRESS_CLIENT,
+        payload: address
     })
 }
 

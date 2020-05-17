@@ -18,4 +18,19 @@ class ClientesController extends Controller
  
         return response()->json($cliente, 200);
     }
+
+    public function store(Request $request)
+    {
+        $now = new \DateTime();
+        $client =  Clientes::create([
+            'name' => $request->name,
+            'lastName' => $request->lastName,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'address' => $request->address,
+            'register' => $now,
+            'dropOut' => null
+        ]);
+        return response()->json($client, 201);
+    }
 }

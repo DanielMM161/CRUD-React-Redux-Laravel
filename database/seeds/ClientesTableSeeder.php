@@ -19,13 +19,13 @@ class ClientesTableSeeder extends Seeder
             $now = new \DateTime();
             $now->format('d-m-Y');
             Clientes::create([
-                'nombre' => $faker->firstName,
-                'apellidos' => $faker->lastName,
-                'telefono' => $faker->phoneNumber,
+                'name' => $faker->firstName,
+                'lastName' => $faker->lastName,
+                'phone' => $faker->phoneNumber,
                 'email' => $faker->unique()->safeEmail,
-                'direccion' => "",
-                'fechaAlta' => $now,
-                'fechaBaja' => null
+                'address' => "",
+                'register' => $now,
+                'dropOut' => null
             ]);
         }
     }

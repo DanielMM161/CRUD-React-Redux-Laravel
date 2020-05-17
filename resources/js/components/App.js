@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Clientes from './Clientes';
-import Editar from './Editar';
+import Clients from './Clients';
+import Update from './CRUD/Update';
+import Add from './CRUD/Add';
 import Menu from './Menu';
 import '../../css/index.css';
 
@@ -12,9 +13,10 @@ function App() {
             <Switch>
                 <React.Fragment>
                     <div className="margen">
-                        <Route exact path="/" component={Clientes}/>
-                        <Route exact path="/clientes" component={Clientes}/>
-                        <Route exact path="/editar/:id" component={Editar}/>
+                        <Route exact path="/" component={Clients}/>
+                        <Route exact path="/clients" component={Clients}/>
+                        <Route exact path="/update/:id" component={Update}/>
+                        <Route exact path="/add" component={Add}/>
                     </div>
                 </React.Fragment>
             </Switch>

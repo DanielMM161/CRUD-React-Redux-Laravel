@@ -21,3 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('clientes', 'ClientesController@index');
 
 Route::put('clientes/{cliente}','ClientesController@update');
+
+Route::post('clientes/add','ClientesController@store');

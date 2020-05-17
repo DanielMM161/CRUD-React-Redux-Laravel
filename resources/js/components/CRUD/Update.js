@@ -1,9 +1,10 @@
-import React, { Component }         from 'react';
-import { connect }                  from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Fatal from '../General/Fatal';
 import Spinner from '../General/Spinner';
-import * as clientesActions from '../../actions/clientesActions';
-class Editar extends Component {
+import * as clientsActions from '../../actions/clientsActions';
+
+class Update extends Component {
     constructor(props) {
         super(props)
 
@@ -12,17 +13,17 @@ class Editar extends Component {
     }
     
     async componentDidMount() {
-        const { clientes, traerTodos } = this.props;
+        const { clients, traerTodos } = this.props;
 
-        if(!clientes.length) {
+        if(!clients.length) {
            await traerTodos()
         }  
     }
 
     async componentDidUpdate() {
-        const { traerTodos, clientes, cargando } = this.props;
+        const { traerTodos, clients, loading } = this.props;
 
-        if(!clientes.length && !cargando) {
+        if(!clients.length && !loading) {
             await traerTodos();
         }
     }
@@ -32,19 +33,20 @@ class Editar extends Component {
             changueNameClient, 
             changueLastNameClient,
             changuePhoneClient,
-            changueEmailClient
+            changueEmailClient,
+            changueAddressClient
         } = this.props;
 
         switch(event.target.name) {
-            case 'nombre':
+            case 'name':
                 changueNameClient(event.target.value);
                 break;
 
-            case 'apellidos':
+            case 'lastName':
                 changueLastNameClient(event.target.value);
                 break;
 
-            case 'telefono':
+            case 'phone':
                 changuePhoneClient(event.target.value);
                 break;
 
@@ -55,11 +57,11 @@ class Editar extends Component {
     }
 
     disableButton() {
-        const { nombre, apellidos, telefono, email, cargando } = this.props;
+        const { name, lastName, phone, email, loading } = this.props;
 
-        if(cargando) return true;
+        if(loading) return true;
 
-        if(!nombre && !apellidos && !telefono && !email ) return true;
+        if(!name && !lastName && !phone && !email ) return true;
 
         return false;
     }
@@ -67,50 +69,51 @@ class Editar extends Component {
     updateClient() {
         const { 
             match: {params: {id} }, 
-            clientes,
-            nombre,
-            apellidos,
-            telefono,
+            clients,
+            name,
+            lastName,
+            phone,
             email,
             updateClient    
         } = this.props
 
-        const client = clientes[id];
+        const client = clients[id];
 
         const updatedClient = {
             ...client,
-            nombre: !nombre ? client.nombre : nombre,
-            apellidos: !apellidos ? client.apellidos : apellidos,
-            telefono: !telefono ? client.telefono : telefono,
+            name: !name ? client.name : name,
+            lastName: !lastName ? client.lastName : lastName,
+            phone: !phone ? client.phone : phone,
             email: !email ? client.email : email
         }
 
         updateClient(updatedClient);
+        console.log(this.props)
     }
 
     editClients() {
-        const { nombre, apellidos, telefono, email} = this.props;
+        const { name, lastName, phone, email} = this.props;
         return(
             <div>
-                Nombre
+                Name
                 <input 
                     type="text"
-                    name="nombre"
-                    value={nombre}
+                    name="name"
+                    value={name}
                     onChange={this.handleChange}/>
                 <br /><br />
-                apellidos
+                Last Name
                 <input 
                     type="text"
-                    name="apellidos"
-                    value={apellidos}
+                    name="lastName"
+                    value={lastName}
                     onChange={this.handleChange}/>
                 <br /><br />
-                Telefono
+                Phone
                 <input 
                     type="text"
-                    name="telefono"
-                    value={telefono}
+                    name="phone"
+                    value={phone}
                     onChange={this.handleChange}/>
                 <br /><br />
                 Email
@@ -123,7 +126,7 @@ class Editar extends Component {
                 <button
                     onClick={ this.updateClient }
                     disabled={this.disableButton()}>
-                    Guardar
+                    Save
                 </button>
             </div>
         )
@@ -132,22 +135,21 @@ class Editar extends Component {
     putClient() {
         const {
             match: {params: {id}},
-            clientes, 
-            cargando, 
+            clients, 
+            loading, 
             error 
         } = this.props;
 
-        const client = clientes[id];
-
         if(error) { <Fatal mensaje={ error }/> }
 
-        if(cargando) { <Spinner />}
+        if(loading) { <Spinner />}
 
-        if(clientes.length) {
+        if(clients.length) {
+            const client = clients[id];
             return(
                 <div>
                     <h2>
-                        {client.nombre} {client.apellidoss}
+                        {client.name} {client.lastName}
                     </h2>
                     { this.editClients() }
                 </div>
@@ -158,7 +160,6 @@ class Editar extends Component {
     }
 
     render() {
-        console.log(this.props)
         return(
             <React.Fragment>
                 {this.putClient()}
@@ -166,5 +167,5 @@ class Editar extends Component {
         )
     }
 }
-const mapStateToProps = ({clientesReducer}) => clientesReducer
-export default connect(mapStateToProps,clientesActions)(Editar);
+const mapStateToProps = ({clientsReducer}) => clientsReducer
+export default connect(mapStateToProps,clientsActions)(Update);

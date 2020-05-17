@@ -1,19 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as clientesActions from '../../actions/clientesActions';
+import * as clientsActions from '../../actions/clientsActions';
 import { Link } from 'react-router-dom';
 import '../../../css/tabla.css';
 const Tabla = (props) => {
 
-    const mostrarFilas = () => props.clientes.map((clientes, id) => (
+    const mostrarFilas = () => props.clients.map((clients, id) => (
         <tr>
-            <td>{clientes.nombre} {clientes.apellidos}</td>
-            <td>{clientes.telefono}</td>
-            <td>{clientes.direccion}</td>
-            <td>{clientes.email}</td>
-            <td>{clientes.fechaAlta}</td>
+            <td>{clients.name} {clients.lastName}</td>
+            <td>{clients.phone}</td>
+            <td>{clients.address}</td>
+            <td>{clients.email}</td>
+            <td>{clients.register}</td>
             <td>
-                <Link to={`/editar/${id}`}>
+                <Link to={`/update/${id}`}>
                     <div className="edit-solid icon"></div>
                 </Link>
             </td>      
@@ -26,19 +26,19 @@ const Tabla = (props) => {
                <thead>
                    <tr>
                        <th>
-                           Nombre
+                           name
                        </th>
                        <th>
-                           Teléfono
+                           Phone
                        </th>
                        <th>
-                           Direccion
+                           Address
                        </th>
                        <th>
                            E-mail
                        </th>
                        <th>
-                           Fecha Alta
+                           Register
                        </th>
                    </tr>
                </thead>
@@ -49,5 +49,5 @@ const Tabla = (props) => {
        </React.Fragment>
     )
 }
-const mapStateToProps = ({clientesReducer}) => clientesReducer
-export default connect(mapStateToProps,clientesActions)(Tabla);
+const mapStateToProps = ({clientsReducer}) => clientsReducer
+export default connect(mapStateToProps,clientsActions)(Tabla);

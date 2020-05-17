@@ -6534,6 +6534,25 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/css/add.css":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/css/add.css ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/css/index.css":
 /*!*****************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/css/index.css ***!
@@ -6546,7 +6565,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "body {\r\n    margin: 0;\r\n}\r\n.margen {\r\n    margin: 100px;\r\n}\r\n#menu {\r\n    background-color: #253A46;\r\n    padding: 20px;\r\n    font-size: 20px;\r\n}\r\n#menu a {\r\n    color: white;\r\n    padding-right: 50px;\r\n}", ""]);
+exports.push([module.i, "body {\r\n    margin: 0;\r\n}\r\n\r\n.flex { display: flex; }\r\n\r\n.flex-col{ flex-direction: column; }\r\n\r\n.justifyc{ justify-content: center; }\r\n\r\n.alignc{ align-items: center; } \r\n\r\n.margen { margin: 100px;}\r\n\r\n#menu {\r\n    background-color: #253A46;\r\n    padding: 20px;\r\n    font-size: 20px;\r\n}\r\n\r\n#menu a {\r\n    color: white;\r\n    padding-right: 50px;\r\n}\r\n\r\n.container {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n}\r\n\r\n/* Icono + */\r\n.plus.icon {\r\n    color: #000;\r\n    position: absolute;\r\n    margin-left: 3px;\r\n    margin-top: 10px;\r\n}\r\n.plus.icon:before {\r\n    content: '';\r\n    position: absolute;\r\n    width: 30px;\r\n    height: 1px;\r\n    background-color: currentColor;\r\n}\r\n.plus.icon:after {\r\n    content: '';\r\n    position: absolute;\r\n    width: 30px;\r\n    height: 1px;\r\n    background-color: currentColor;\r\n    transform: rotate(90deg);\r\n}", ""]);
 
 // exports
 
@@ -73726,6 +73745,36 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/css/add.css":
+/*!*******************************!*\
+  !*** ./resources/css/add.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader??ref--6-1!../../node_modules/postcss-loader/src??ref--6-2!./add.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/css/add.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./resources/css/index.css":
 /*!*********************************!*\
   !*** ./resources/css/index.css ***!
@@ -73816,27 +73865,29 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/actions/clientesActions.js":
-/*!*************************************************!*\
-  !*** ./resources/js/actions/clientesActions.js ***!
-  \*************************************************/
-/*! exports provided: traerTodos, updateClient, changueNameClient, changueLastNameClient, changuePhoneClient, changueEmailClient, cleanAtribute */
+/***/ "./resources/js/actions/clientsActions.js":
+/*!************************************************!*\
+  !*** ./resources/js/actions/clientsActions.js ***!
+  \************************************************/
+/*! exports provided: traerTodos, updateClient, addClient, changueNameClient, changueLastNameClient, changuePhoneClient, changueEmailClient, changueAddressClient, cleanAtribute */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "traerTodos", function() { return traerTodos; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateClient", function() { return updateClient; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addClient", function() { return addClient; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changueNameClient", function() { return changueNameClient; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changueLastNameClient", function() { return changueLastNameClient; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changuePhoneClient", function() { return changuePhoneClient; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changueEmailClient", function() { return changueEmailClient; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changueAddressClient", function() { return changueAddressClient; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cleanAtribute", function() { return cleanAtribute; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../types/clientesTypes */ "./resources/js/types/clientesTypes.js");
+/* harmony import */ var _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../types/clientsTypes */ "./resources/js/types/clientsTypes.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -73854,7 +73905,7 @@ var traerTodos = function traerTodos() {
           switch (_context.prev = _context.next) {
             case 0:
               dispatch({
-                type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["CARGANDO"]
+                type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["LOADING"]
               });
               _context.prev = 1;
               _context.next = 4;
@@ -73863,7 +73914,7 @@ var traerTodos = function traerTodos() {
             case 4:
               respuesta = _context.sent;
               dispatch({
-                type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["TRAER_TODOS"],
+                type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["GET_ALL"],
                 payload: respuesta.data
               });
               _context.next = 12;
@@ -73874,7 +73925,7 @@ var traerTodos = function traerTodos() {
               _context.t0 = _context["catch"](1);
               console.log('error');
               dispatch({
-                type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["ERROR"],
+                type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["ERROR"],
                 payload: 'No se han podido cargar los usuarios'
               });
 
@@ -73899,37 +73950,35 @@ var updateClient = function updateClient(client) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              console.log('client', client);
               dispatch({
-                type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["CARGANDO"]
+                type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["LOADING"]
               });
-              _context2.prev = 2;
-              _context2.next = 5;
+              _context2.prev = 1;
+              _context2.next = 4;
               return axios__WEBPACK_IMPORTED_MODULE_1___default.a.put("/api/clientes/".concat(client.id), client);
 
-            case 5:
+            case 4:
               request = _context2.sent;
-              console.log('request', request);
               dispatch({
-                type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["UPDATE_CLIENT"]
+                type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["UPDATE_CLIENT"]
               });
-              _context2.next = 13;
+              _context2.next = 11;
               break;
 
-            case 10:
-              _context2.prev = 10;
-              _context2.t0 = _context2["catch"](2);
+            case 8:
+              _context2.prev = 8;
+              _context2.t0 = _context2["catch"](1);
               dispatch({
-                type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["ERROR"],
+                type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["ERROR"],
                 payload: 'No se pudo actualizar el cliente'
               });
 
-            case 13:
+            case 11:
             case "end":
               return _context2.stop();
           }
         }
-      }, _callee2, null, [[2, 10]]);
+      }, _callee2, null, [[1, 8]]);
     }));
 
     return function (_x2) {
@@ -73937,10 +73986,55 @@ var updateClient = function updateClient(client) {
     };
   }();
 };
+var addClient = function addClient(newClient) {
+  return /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(dispatch) {
+      var request;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              console.log('nuevo cliente', newClient);
+              dispatch({
+                type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["LOADING"]
+              });
+              _context3.prev = 2;
+              _context3.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("/api/clientes/add", newClient);
+
+            case 5:
+              request = _context3.sent;
+              dispatch({
+                type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["ADD_CLIENT"]
+              });
+              _context3.next = 12;
+              break;
+
+            case 9:
+              _context3.prev = 9;
+              _context3.t0 = _context3["catch"](2);
+              dispatch({
+                type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["ERROR"],
+                payload: 'No se pudo añadir el cliente'
+              });
+
+            case 12:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3, null, [[2, 9]]);
+    }));
+
+    return function (_x3) {
+      return _ref3.apply(this, arguments);
+    };
+  }();
+};
 var changueNameClient = function changueNameClient(name) {
   return function (dispatch) {
     dispatch({
-      type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["CHANGE_NAME_CLIENT"],
+      type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["CHANGE_NAME_CLIENT"],
       payload: name
     });
   };
@@ -73948,7 +74042,7 @@ var changueNameClient = function changueNameClient(name) {
 var changueLastNameClient = function changueLastNameClient(lastName) {
   return function (dispatch) {
     dispatch({
-      type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["CHANGE_LAST_NAME_CLIENT"],
+      type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["CHANGE_LAST_NAME_CLIENT"],
       payload: lastName
     });
   };
@@ -73956,7 +74050,7 @@ var changueLastNameClient = function changueLastNameClient(lastName) {
 var changuePhoneClient = function changuePhoneClient(phone) {
   return function (dispatch) {
     dispatch({
-      type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["CHANGE_PHONE_CLIENT"],
+      type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["CHANGE_PHONE_CLIENT"],
       payload: phone
     });
   };
@@ -73964,15 +74058,23 @@ var changuePhoneClient = function changuePhoneClient(phone) {
 var changueEmailClient = function changueEmailClient(email) {
   return function (dispatch) {
     dispatch({
-      type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["CHANGE_EMAIL_CLIENT"],
+      type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["CHANGE_EMAIL_CLIENT"],
       payload: email
+    });
+  };
+};
+var changueAddressClient = function changueAddressClient(address) {
+  return function (dispatch) {
+    dispatch({
+      type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["CHANGE_ADDRESS_CLIENT"],
+      payload: address
     });
   };
 };
 var cleanAtribute = function cleanAtribute() {
   return function (dispatch) {
     dispatch({
-      type: _types_clientesTypes__WEBPACK_IMPORTED_MODULE_2__["CLEAN_ATRIBUTE"]
+      type: _types_clientsTypes__WEBPACK_IMPORTED_MODULE_2__["CLEAN_ATRIBUTE"]
     });
   };
 };
@@ -74060,11 +74162,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _Clientes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Clientes */ "./resources/js/components/Clientes/index.js");
-/* harmony import */ var _Editar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Editar */ "./resources/js/components/Editar/index.js");
-/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Menu */ "./resources/js/components/Menu.js");
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../css/index.css */ "./resources/css/index.css");
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Clients__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Clients */ "./resources/js/components/Clients/index.js");
+/* harmony import */ var _CRUD_Update__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CRUD/Update */ "./resources/js/components/CRUD/Update.js");
+/* harmony import */ var _CRUD_Add__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CRUD/Add */ "./resources/js/components/CRUD/Add.js");
+/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Menu */ "./resources/js/components/Menu.js");
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../css/index.css */ "./resources/css/index.css");
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -74073,20 +74177,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Menu__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Menu__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "margen"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/",
-    component: _Clientes__WEBPACK_IMPORTED_MODULE_2__["default"]
+    component: _Clients__WEBPACK_IMPORTED_MODULE_2__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/clientes",
-    component: _Clientes__WEBPACK_IMPORTED_MODULE_2__["default"]
+    path: "/clients",
+    component: _Clients__WEBPACK_IMPORTED_MODULE_2__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/editar/:id",
-    component: _Editar__WEBPACK_IMPORTED_MODULE_3__["default"]
+    path: "/update/:id",
+    component: _CRUD_Update__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/add",
+    component: _CRUD_Add__WEBPACK_IMPORTED_MODULE_4__["default"]
   })))));
 }
 
@@ -74094,10 +74202,10 @@ function App() {
 
 /***/ }),
 
-/***/ "./resources/js/components/Clientes/Tabla.js":
-/*!***************************************************!*\
-  !*** ./resources/js/components/Clientes/Tabla.js ***!
-  \***************************************************/
+/***/ "./resources/js/components/CRUD/Add.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/CRUD/Add.js ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -74106,57 +74214,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions_clientesActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/clientesActions */ "./resources/js/actions/clientesActions.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _css_tabla_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../css/tabla.css */ "./resources/css/tabla.css");
-/* harmony import */ var _css_tabla_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_tabla_css__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-
-var Tabla = function Tabla(props) {
-  var mostrarFilas = function mostrarFilas() {
-    return props.clientes.map(function (clientes, id) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, clientes.nombre, " ", clientes.apellidos), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, clientes.telefono), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, clientes.direccion), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, clientes.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, clientes.fechaAlta), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        to: "/editar/".concat(id)
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "edit-solid icon"
-      }))));
-    });
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-    className: "tabla"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Nombre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Tel\xE9fono"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Direccion"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "E-mail"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Fecha Alta"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, mostrarFilas())));
-};
-
-var mapStateToProps = function mapStateToProps(_ref) {
-  var clientesReducer = _ref.clientesReducer;
-  return clientesReducer;
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions_clientesActions__WEBPACK_IMPORTED_MODULE_2__)(Tabla));
-
-/***/ }),
-
-/***/ "./resources/js/components/Clientes/index.js":
-/*!***************************************************!*\
-  !*** ./resources/js/components/Clientes/index.js ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions_clientesActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/clientesActions */ "./resources/js/actions/clientesActions.js");
-/* harmony import */ var _Tabla__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Tabla */ "./resources/js/components/Clientes/Tabla.js");
-/* harmony import */ var _General_Fatal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../General/Fatal */ "./resources/js/components/General/Fatal.js");
-/* harmony import */ var _General_Spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../General/Spinner */ "./resources/js/components/General/Spinner.js");
+/* harmony import */ var _actions_clientsActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/clientsActions */ "./resources/js/actions/clientsActions.js");
+/* harmony import */ var _css_add_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../css/add.css */ "./resources/css/add.css");
+/* harmony import */ var _css_add_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_add_css__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -74184,65 +74244,134 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+var Add = /*#__PURE__*/function (_Component) {
+  _inherits(Add, _Component);
 
+  var _super = _createSuper(Add);
 
-var Clientes = /*#__PURE__*/function (_Component) {
-  _inherits(Clientes, _Component);
+  function Add(props) {
+    var _this;
 
-  var _super = _createSuper(Clientes);
+    _classCallCheck(this, Add);
 
-  function Clientes() {
-    _classCallCheck(this, Clientes);
-
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
-  _createClass(Clientes, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (!this.props.clientes.length) {
-        this.props.traerTodos();
+  _createClass(Add, [{
+    key: "handleChange",
+    value: function handleChange(event) {
+      var _this$props = this.props,
+          changueNameClient = _this$props.changueNameClient,
+          changueLastNameClient = _this$props.changueLastNameClient,
+          changuePhoneClient = _this$props.changuePhoneClient,
+          changueEmailClient = _this$props.changueEmailClient,
+          changueAddressClient = _this$props.changueAddressClient;
+
+      switch (event.target.name) {
+        case 'name':
+          changueNameClient(event.target.value);
+          break;
+
+        case 'lastName':
+          changueLastNameClient(event.target.value);
+          break;
+
+        case 'phone':
+          changuePhoneClient(event.target.value);
+          break;
+
+        case 'email':
+          changueEmailClient(event.target.value);
+          break;
+
+        case 'address':
+          changueAddressClient(event.target.value);
+          break;
       }
     }
   }, {
-    key: "mostrarContenido",
-    value: function mostrarContenido() {
-      if (this.props.cargando) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_General_Spinner__WEBPACK_IMPORTED_MODULE_5__["default"], null);
-      }
-
-      if (this.props.error) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_General_Fatal__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          mensaje: this.props.error
-        });
-      }
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabla__WEBPACK_IMPORTED_MODULE_3__["default"], null);
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      var _this$props2 = this.props,
+          name = _this$props2.name,
+          lastName = _this$props2.lastName,
+          phone = _this$props2.phone,
+          email = _this$props2.email,
+          address = _this$props2.address,
+          addClient = _this$props2.addClient;
+      var newClient = {
+        name: name,
+        lastName: lastName,
+        phone: phone,
+        email: email,
+        address: address
+      };
+      addClient(newClient);
+      event.preventDefault();
     }
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Clientes"), this.mostrarContenido());
+      var _this$props3 = this.props,
+          name = _this$props3.name,
+          lastName = _this$props3.lastName,
+          phone = _this$props3.phone,
+          email = _this$props3.email,
+          address = _this$props3.address;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex justifyc alignc flex-col"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "New Client"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, "Name", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "name",
+        value: name,
+        onChange: this.handleChange
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Last Name", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "lastName",
+        value: lastName,
+        onChange: this.handleChange
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Address", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "address",
+        value: address,
+        onChange: this.handleChange
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Phone", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "phone",
+        value: phone,
+        onChange: this.handleChange
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Email", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "email",
+        name: "email",
+        value: email,
+        onChange: this.handleChange
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "submit",
+        value: "Add",
+        onClick: this.handleSubmit
+      })));
     }
   }]);
 
-  return Clientes;
+  return Add;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 var mapStateToProps = function mapStateToProps(_ref) {
-  var clientesReducer = _ref.clientesReducer;
-  return clientesReducer;
+  var clientsReducer = _ref.clientsReducer;
+  return clientsReducer;
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions_clientesActions__WEBPACK_IMPORTED_MODULE_2__)(Clientes));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions_clientsActions__WEBPACK_IMPORTED_MODULE_2__)(Add));
 
 /***/ }),
 
-/***/ "./resources/js/components/Editar/index.js":
-/*!*************************************************!*\
-  !*** ./resources/js/components/Editar/index.js ***!
-  \*************************************************/
+/***/ "./resources/js/components/CRUD/Update.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/CRUD/Update.js ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -74255,7 +74384,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _General_Fatal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../General/Fatal */ "./resources/js/components/General/Fatal.js");
 /* harmony import */ var _General_Spinner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../General/Spinner */ "./resources/js/components/General/Spinner.js");
-/* harmony import */ var _actions_clientesActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/clientesActions */ "./resources/js/actions/clientesActions.js");
+/* harmony import */ var _actions_clientsActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/clientsActions */ "./resources/js/actions/clientsActions.js");
 
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -74296,15 +74425,15 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var Editar = /*#__PURE__*/function (_Component) {
-  _inherits(Editar, _Component);
+var Update = /*#__PURE__*/function (_Component) {
+  _inherits(Update, _Component);
 
-  var _super = _createSuper(Editar);
+  var _super = _createSuper(Update);
 
-  function Editar(props) {
+  function Update(props) {
     var _this;
 
-    _classCallCheck(this, Editar);
+    _classCallCheck(this, Update);
 
     _this = _super.call(this, props);
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
@@ -74312,19 +74441,19 @@ var Editar = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(Editar, [{
+  _createClass(Update, [{
     key: "componentDidMount",
     value: function () {
       var _componentDidMount = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var _this$props, clientes, traerTodos;
+        var _this$props, clients, traerTodos;
 
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _this$props = this.props, clientes = _this$props.clientes, traerTodos = _this$props.traerTodos;
+                _this$props = this.props, clients = _this$props.clients, traerTodos = _this$props.traerTodos;
 
-                if (clientes.length) {
+                if (clients.length) {
                   _context.next = 4;
                   break;
                 }
@@ -74350,15 +74479,15 @@ var Editar = /*#__PURE__*/function (_Component) {
     key: "componentDidUpdate",
     value: function () {
       var _componentDidUpdate = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-        var _this$props2, traerTodos, clientes, cargando;
+        var _this$props2, traerTodos, clients, loading;
 
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _this$props2 = this.props, traerTodos = _this$props2.traerTodos, clientes = _this$props2.clientes, cargando = _this$props2.cargando;
+                _this$props2 = this.props, traerTodos = _this$props2.traerTodos, clients = _this$props2.clients, loading = _this$props2.loading;
 
-                if (!(!clientes.length && !cargando)) {
+                if (!(!clients.length && !loading)) {
                   _context2.next = 4;
                   break;
                 }
@@ -74387,18 +74516,19 @@ var Editar = /*#__PURE__*/function (_Component) {
           changueNameClient = _this$props3.changueNameClient,
           changueLastNameClient = _this$props3.changueLastNameClient,
           changuePhoneClient = _this$props3.changuePhoneClient,
-          changueEmailClient = _this$props3.changueEmailClient;
+          changueEmailClient = _this$props3.changueEmailClient,
+          changueAddressClient = _this$props3.changueAddressClient;
 
       switch (event.target.name) {
-        case 'nombre':
+        case 'name':
           changueNameClient(event.target.value);
           break;
 
-        case 'apellidos':
+        case 'lastName':
           changueLastNameClient(event.target.value);
           break;
 
-        case 'telefono':
+        case 'phone':
           changuePhoneClient(event.target.value);
           break;
 
@@ -74411,13 +74541,13 @@ var Editar = /*#__PURE__*/function (_Component) {
     key: "disableButton",
     value: function disableButton() {
       var _this$props4 = this.props,
-          nombre = _this$props4.nombre,
-          apellidos = _this$props4.apellidos,
-          telefono = _this$props4.telefono,
+          name = _this$props4.name,
+          lastName = _this$props4.lastName,
+          phone = _this$props4.phone,
           email = _this$props4.email,
-          cargando = _this$props4.cargando;
-      if (cargando) return true;
-      if (!nombre && !apellidos && !telefono && !email) return true;
+          loading = _this$props4.loading;
+      if (loading) return true;
+      if (!name && !lastName && !phone && !email) return true;
       return false;
     }
   }, {
@@ -74425,45 +74555,46 @@ var Editar = /*#__PURE__*/function (_Component) {
     value: function updateClient() {
       var _this$props5 = this.props,
           id = _this$props5.match.params.id,
-          clientes = _this$props5.clientes,
-          nombre = _this$props5.nombre,
-          apellidos = _this$props5.apellidos,
-          telefono = _this$props5.telefono,
+          clients = _this$props5.clients,
+          name = _this$props5.name,
+          lastName = _this$props5.lastName,
+          phone = _this$props5.phone,
           email = _this$props5.email,
           updateClient = _this$props5.updateClient;
-      var client = clientes[id];
+      var client = clients[id];
 
       var updatedClient = _objectSpread(_objectSpread({}, client), {}, {
-        nombre: !nombre ? client.nombre : nombre,
-        apellidos: !apellidos ? client.apellidos : apellidos,
-        telefono: !telefono ? client.telefono : telefono,
+        name: !name ? client.name : name,
+        lastName: !lastName ? client.lastName : lastName,
+        phone: !phone ? client.phone : phone,
         email: !email ? client.email : email
       });
 
       updateClient(updatedClient);
+      console.log(this.props);
     }
   }, {
     key: "editClients",
     value: function editClients() {
       var _this$props6 = this.props,
-          nombre = _this$props6.nombre,
-          apellidos = _this$props6.apellidos,
-          telefono = _this$props6.telefono,
+          name = _this$props6.name,
+          lastName = _this$props6.lastName,
+          phone = _this$props6.phone,
           email = _this$props6.email;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, "Nombre", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, "Name", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         type: "text",
-        name: "nombre",
-        value: nombre,
+        name: "name",
+        value: name,
         onChange: this.handleChange
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), "apellidos", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), "Last Name", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         type: "text",
-        name: "apellidos",
-        value: apellidos,
+        name: "lastName",
+        value: lastName,
         onChange: this.handleChange
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), "Telefono", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), "Phone", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         type: "text",
-        name: "telefono",
-        value: telefono,
+        name: "phone",
+        value: phone,
         onChange: this.handleChange
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), "Email", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
         type: "text",
@@ -74473,17 +74604,16 @@ var Editar = /*#__PURE__*/function (_Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
         onClick: this.updateClient,
         disabled: this.disableButton()
-      }, "Guardar"));
+      }, "Save"));
     }
   }, {
     key: "putClient",
     value: function putClient() {
       var _this$props7 = this.props,
           id = _this$props7.match.params.id,
-          clientes = _this$props7.clientes,
-          cargando = _this$props7.cargando,
+          clients = _this$props7.clients,
+          loading = _this$props7.loading,
           error = _this$props7.error;
-      var client = clientes[id];
 
       if (error) {
         /*#__PURE__*/
@@ -74492,13 +74622,14 @@ var Editar = /*#__PURE__*/function (_Component) {
         });
       }
 
-      if (cargando) {
+      if (loading) {
         /*#__PURE__*/
         react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_General_Spinner__WEBPACK_IMPORTED_MODULE_4__["default"], null);
       }
 
-      if (clientes.length) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, client.nombre, " ", client.apellidoss), this.editClients());
+      if (clients.length) {
+        var client = clients[id];
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, client.name, " ", client.lastName), this.editClients());
       } else {
         return '';
       }
@@ -74506,20 +74637,171 @@ var Editar = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, this.putClient());
     }
   }]);
 
-  return Editar;
+  return Update;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 var mapStateToProps = function mapStateToProps(_ref) {
-  var clientesReducer = _ref.clientesReducer;
-  return clientesReducer;
+  var clientsReducer = _ref.clientsReducer;
+  return clientsReducer;
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, _actions_clientesActions__WEBPACK_IMPORTED_MODULE_5__)(Editar));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, _actions_clientsActions__WEBPACK_IMPORTED_MODULE_5__)(Update));
+
+/***/ }),
+
+/***/ "./resources/js/components/Clients/Tabla.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/Clients/Tabla.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions_clientsActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/clientsActions */ "./resources/js/actions/clientsActions.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _css_tabla_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../css/tabla.css */ "./resources/css/tabla.css");
+/* harmony import */ var _css_tabla_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_tabla_css__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+var Tabla = function Tabla(props) {
+  var mostrarFilas = function mostrarFilas() {
+    return props.clients.map(function (clients, id) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, clients.name, " ", clients.lastName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, clients.phone), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, clients.address), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, clients.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, clients.register), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/update/".concat(id)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "edit-solid icon"
+      }))));
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+    className: "tabla"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Phone"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "E-mail"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Register"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, mostrarFilas())));
+};
+
+var mapStateToProps = function mapStateToProps(_ref) {
+  var clientsReducer = _ref.clientsReducer;
+  return clientsReducer;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions_clientsActions__WEBPACK_IMPORTED_MODULE_2__)(Tabla));
+
+/***/ }),
+
+/***/ "./resources/js/components/Clients/index.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/Clients/index.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _actions_clientsActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/clientsActions */ "./resources/js/actions/clientsActions.js");
+/* harmony import */ var _Tabla__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Tabla */ "./resources/js/components/Clients/Tabla.js");
+/* harmony import */ var _General_Fatal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../General/Fatal */ "./resources/js/components/General/Fatal.js");
+/* harmony import */ var _General_Spinner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../General/Spinner */ "./resources/js/components/General/Spinner.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+
+
+
+var Clients = /*#__PURE__*/function (_Component) {
+  _inherits(Clients, _Component);
+
+  var _super = _createSuper(Clients);
+
+  function Clients() {
+    _classCallCheck(this, Clients);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Clients, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (!this.props.clients.length) {
+        this.props.traerTodos();
+      }
+    }
+  }, {
+    key: "mostrarContenido",
+    value: function mostrarContenido() {
+      if (this.props.loading) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_General_Spinner__WEBPACK_IMPORTED_MODULE_6__["default"], null);
+      }
+
+      if (this.props.error) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_General_Fatal__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          mensaje: this.props.error
+        });
+      }
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tabla__WEBPACK_IMPORTED_MODULE_4__["default"], null);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/add"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "plus icon"
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Clients"), this.mostrarContenido());
+    }
+  }]);
+
+  return Clients;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+var mapStateToProps = function mapStateToProps(_ref) {
+  var clientsReducer = _ref.clientsReducer;
+  return clientsReducer;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions_clientsActions__WEBPACK_IMPORTED_MODULE_3__)(Clients));
 
 /***/ }),
 
@@ -74641,16 +74923,16 @@ if (document.getElementById('app')) {
 
 /***/ }),
 
-/***/ "./resources/js/reducers/clientesReducer.js":
-/*!**************************************************!*\
-  !*** ./resources/js/reducers/clientesReducer.js ***!
-  \**************************************************/
+/***/ "./resources/js/reducers/clientsReducer.js":
+/*!*************************************************!*\
+  !*** ./resources/js/reducers/clientsReducer.js ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _types_clientesTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../types/clientesTypes */ "./resources/js/types/clientesTypes.js");
+/* harmony import */ var _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../types/clientsTypes */ "./resources/js/types/clientsTypes.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -74659,12 +74941,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var INITIAL_STATE = {
-  clientes: [],
-  nombre: '',
-  apellidos: '',
-  telefono: '',
+  clients: [],
+  name: '',
+  lastName: '',
+  phone: '',
   email: '',
-  cargando: false,
+  address: '',
+  loading: false,
   error: ''
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
@@ -74672,60 +74955,74 @@ var INITIAL_STATE = {
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case _types_clientesTypes__WEBPACK_IMPORTED_MODULE_0__["CARGANDO"]:
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["LOADING"]:
       return _objectSpread(_objectSpread({}, state), {}, {
-        cargando: true
+        loading: true
       });
 
-    case _types_clientesTypes__WEBPACK_IMPORTED_MODULE_0__["TRAER_TODOS"]:
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["GET_ALL"]:
       return _objectSpread(_objectSpread({}, state), {}, {
-        cargando: false,
-        clientes: action.payload,
+        loading: false,
+        clients: action.payload,
         error: ''
       });
 
-    case _types_clientesTypes__WEBPACK_IMPORTED_MODULE_0__["ERROR"]:
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["UPDATE_CLIENT"]:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        clients: [],
+        name: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        address: '',
+        loading: false
+      });
+
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["ADD_CLIENT"]:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        clients: [],
+        loading: false,
+        error: ''
+      });
+
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["ERROR"]:
       return _objectSpread(_objectSpread({}, state), {}, {
         error: action.payload,
-        cargando: false
+        loading: false
       });
 
-    case _types_clientesTypes__WEBPACK_IMPORTED_MODULE_0__["CHANGE_NAME_CLIENT"]:
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["CHANGE_NAME_CLIENT"]:
       return _objectSpread(_objectSpread({}, state), {}, {
-        nombre: action.payload
+        name: action.payload
       });
 
-    case _types_clientesTypes__WEBPACK_IMPORTED_MODULE_0__["CHANGE_LAST_NAME_CLIENT"]:
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["CHANGE_LAST_NAME_CLIENT"]:
       return _objectSpread(_objectSpread({}, state), {}, {
-        apellidos: action.payload
+        lastName: action.payload
       });
 
-    case _types_clientesTypes__WEBPACK_IMPORTED_MODULE_0__["CHANGE_PHONE_CLIENT"]:
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["CHANGE_PHONE_CLIENT"]:
       return _objectSpread(_objectSpread({}, state), {}, {
-        telefono: action.payload
+        phone: action.payload
       });
 
-    case _types_clientesTypes__WEBPACK_IMPORTED_MODULE_0__["CHANGE_EMAIL_CLIENT"]:
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["CHANGE_EMAIL_CLIENT"]:
       return _objectSpread(_objectSpread({}, state), {}, {
         email: action.payload
       });
 
-    case _types_clientesTypes__WEBPACK_IMPORTED_MODULE_0__["CLEAN_ATRIBUTE"]:
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["CHANGE_ADDRESS_CLIENT"]:
       return _objectSpread(_objectSpread({}, state), {}, {
-        nombre: '',
-        apellidos: '',
-        telefono: '',
-        email: ''
+        address: action.payload
       });
 
-    case _types_clientesTypes__WEBPACK_IMPORTED_MODULE_0__["UPDATE_CLIENT"]:
+    case _types_clientsTypes__WEBPACK_IMPORTED_MODULE_0__["CLEAN_ATRIBUTE"]:
       return _objectSpread(_objectSpread({}, state), {}, {
-        clientes: [],
-        nombre: '',
-        apellidos: '',
-        telefono: '',
+        name: '',
+        lastName: '',
+        phone: '',
         email: '',
-        cargando: false
+        address: ''
       });
 
     default:
@@ -74745,45 +75042,47 @@ var INITIAL_STATE = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _clientesReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./clientesReducer */ "./resources/js/reducers/clientesReducer.js");
+/* harmony import */ var _clientsReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./clientsReducer */ "./resources/js/reducers/clientsReducer.js");
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  clientesReducer: _clientesReducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  clientsReducer: _clientsReducer__WEBPACK_IMPORTED_MODULE_1__["default"]
 }));
 
 /***/ }),
 
-/***/ "./resources/js/types/clientesTypes.js":
-/*!*********************************************!*\
-  !*** ./resources/js/types/clientesTypes.js ***!
-  \*********************************************/
-/*! exports provided: CARGANDO, AGREGAR, BORRAR, UPDATE_CLIENT, TRAER_TODOS, ERROR, CHANGE_NAME_CLIENT, CHANGE_LAST_NAME_CLIENT, CHANGE_PHONE_CLIENT, CHANGE_EMAIL_CLIENT, CLEAN_ATRIBUTE */
+/***/ "./resources/js/types/clientsTypes.js":
+/*!********************************************!*\
+  !*** ./resources/js/types/clientsTypes.js ***!
+  \********************************************/
+/*! exports provided: LOADING, ADD_CLIENT, DELETE_CLIENT, UPDATE_CLIENT, GET_ALL, ERROR, CHANGE_NAME_CLIENT, CHANGE_LAST_NAME_CLIENT, CHANGE_PHONE_CLIENT, CHANGE_EMAIL_CLIENT, CHANGE_ADDRESS_CLIENT, CLEAN_ATRIBUTE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CARGANDO", function() { return CARGANDO; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AGREGAR", function() { return AGREGAR; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BORRAR", function() { return BORRAR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOADING", function() { return LOADING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CLIENT", function() { return ADD_CLIENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DELETE_CLIENT", function() { return DELETE_CLIENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_CLIENT", function() { return UPDATE_CLIENT; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRAER_TODOS", function() { return TRAER_TODOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_ALL", function() { return GET_ALL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ERROR", function() { return ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_NAME_CLIENT", function() { return CHANGE_NAME_CLIENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_LAST_NAME_CLIENT", function() { return CHANGE_LAST_NAME_CLIENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_PHONE_CLIENT", function() { return CHANGE_PHONE_CLIENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_EMAIL_CLIENT", function() { return CHANGE_EMAIL_CLIENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_ADDRESS_CLIENT", function() { return CHANGE_ADDRESS_CLIENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CLEAN_ATRIBUTE", function() { return CLEAN_ATRIBUTE; });
-var CARGANDO = 'clientes_cargando';
-var AGREGAR = 'clientes_agregar';
-var BORRAR = 'clientes_borrar';
+var LOADING = 'clientes_cargando';
+var ADD_CLIENT = 'clientes_agregar';
+var DELETE_CLIENT = 'clientes_borrar';
 var UPDATE_CLIENT = 'clientes_actualizar';
-var TRAER_TODOS = 'clientes_traer_todos';
+var GET_ALL = 'clientes_traer_todos';
 var ERROR = 'clientes_error';
 var CHANGE_NAME_CLIENT = 'cambiar_nombre_cliente';
 var CHANGE_LAST_NAME_CLIENT = 'cambiar_apellido_cliente';
 var CHANGE_PHONE_CLIENT = 'cambiar_telefono_cliente';
 var CHANGE_EMAIL_CLIENT = 'cambiar_email_cliente';
+var CHANGE_ADDRESS_CLIENT = 'cambiar_direccion_cliente';
 var CLEAN_ATRIBUTE = 'limpiar_atributos';
 
 /***/ }),
