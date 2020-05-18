@@ -10,7 +10,9 @@ import {    LOADING,
             CHANGE_PHONE_CLIENT,
             CHANGE_EMAIL_CLIENT,
             CHANGE_ADDRESS_CLIENT,
-            CLEAN_ATRIBUTE } from '../types/clientsTypes';
+            CLEAN_ATRIBUTE,
+            PRUEBA,
+            PRUEBA2 } from '../types/clientsTypes';
 
 export const traerTodos = () => async(dispatch) => {
     dispatch({
@@ -24,7 +26,6 @@ export const traerTodos = () => async(dispatch) => {
             payload: respuesta.data
         });
     } catch (error) {
-        console.log('error')
         dispatch({
             type: ERROR,
             payload: 'No se han podido cargar los usuarios'
@@ -52,7 +53,6 @@ export const updateClient = (client) => async(dispatch) => {
 }
 
 export const addClient = (newClient) => async(dispatch) => {
-    console.log('nuevo cliente', newClient);
     dispatch({
         type: LOADING
     });
@@ -67,6 +67,23 @@ export const addClient = (newClient) => async(dispatch) => {
         dispatch({
             type: ERROR,
             payload: 'No se pudo añadir el cliente'
+        });  
+    }
+}
+
+export const deleteClient = (id) => async(dispatch) => {
+    dispatch({
+        type: LOADING
+    });
+    try {
+        await axios.delete(`/api/clientes/delete/${id}`);
+        dispatch({
+            type: UPDATE_CLIENT
+        });
+    } catch (error) {
+        dispatch({
+            type: ERROR,
+            payload: 'No se pudo eliminar el cliente'
         });  
     }
 }
@@ -109,5 +126,17 @@ export const changueAddressClient = (address) => (dispatch) => {
 export const cleanAtribute = () => (dispatch) => {
     dispatch({
         type: CLEAN_ATRIBUTE
+    })
+}
+
+export const prueba = () => (dispatch,getState) => {
+    dispatch({
+        type: PRUEBA
+    })
+}
+
+export const prueba2 = () => (dispatch,getState) => {
+    dispatch({
+        type: PRUEBA2
     })
 }

@@ -33,4 +33,11 @@ class ClientesController extends Controller
         ]);
         return response()->json($client, 201);
     }
+
+    public function delete($id)
+    {
+        $client = Clientes::find($id);
+
+        $client->delete();
+    }
 }

@@ -8,9 +8,17 @@ import Spinner from '../General/Spinner';
 
 class Clients extends Component {
 
-    componentDidMount() {
+    async componentDidMount() {
         if(!this.props.clients.length) {
-            this.props.traerTodos();
+            await this.props.traerTodos();
+        }
+    }
+
+    async componentDidUpdate() {
+        const { traerTodos, clients } = this.props;
+        console.log('SOY EL UPDATE DE INDEX');
+        if(!clients.length) {
+            await traerTodos();
         }
     }
 

@@ -9,7 +9,9 @@ import {    LOADING,
             CHANGE_PHONE_CLIENT,
             CHANGE_EMAIL_CLIENT,
             CHANGE_ADDRESS_CLIENT,
-            CLEAN_ATRIBUTE } from '../types/clientsTypes';
+            CLEAN_ATRIBUTE,
+            PRUEBA,
+            PRUEBA2 } from '../types/clientsTypes';
 
 const INITIAL_STATE = {
     clients: [],
@@ -19,7 +21,8 @@ const INITIAL_STATE = {
     email: '',
     address: '',
     loading: false,
-    error: ''
+    error: '',
+    showClient: false
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -104,6 +107,18 @@ export default (state = INITIAL_STATE, action) => {
                 phone: '',
                 email: '',
                 address: ''
+            }
+
+        case PRUEBA:
+            return {
+                ...state,
+                showClient: true
+            }
+    
+        case PRUEBA2:
+            return {
+                ...state,
+                showClient: false
             }
 
         default: return state;

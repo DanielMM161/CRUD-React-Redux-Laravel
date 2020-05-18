@@ -23,3 +23,5 @@ Route::get('clientes', 'ClientesController@index');
 Route::put('clientes/{cliente}','ClientesController@update');
 
 Route::post('clientes/add','ClientesController@store');
+
+Route::delete('clientes/delete/{id}','ClientesController@delete');

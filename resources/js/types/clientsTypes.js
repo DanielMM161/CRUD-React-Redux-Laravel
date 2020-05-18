@@ -11,3 +11,8 @@ export const CHANGE_PHONE_CLIENT = 'cambiar_telefono_cliente';
 export const CHANGE_EMAIL_CLIENT = 'cambiar_email_cliente';
 export const CHANGE_ADDRESS_CLIENT = 'cambiar_direccion_cliente';
 export const CLEAN_ATRIBUTE = 'limpiar_atributos';
+
+
+
+export const PRUEBA = 'PRUEBA';
+export const PRUEBA2 = 'PRUEBA2';
